@@ -1,0 +1,289 @@
+:root {
+  /* Fuentes */
+  --font-1: "Crimson Pro", serif;
+  --font-2: "Lora", serif;
+  --font-3: "Montserrat", sans-serif;
+
+  /* Color */
+  --dark-gray: #181719;
+  --medium-gray: #828282;
+  --light-gray: #a9a9a9;
+  --light-text: #ffffff;
+}
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--dark-gray);
+  color: var(--light-text);
+}
+
+/* Utiles */
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Navegación */
+header {
+  margin-bottom: 5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 8rem;
+  font-family: var(--font-3);
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem;
+  align-items: center;
+}
+
+.logo a {
+  flex: 0 0 20%;
+  font-family: var(--font-1);
+  font-weight: 200;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--light-text);
+  border: 1px solid var(--light-text);
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.logo a:hover {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+.navegacion {
+  display: none;
+}
+
+#navegacion {
+  background-color: var(--dark-gray);
+  font-family: var(--font-3);
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: none;
+  position: fixed;
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+}
+
+.nav-list1 {
+  flex: 0 1 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30rem;
+  list-style-type: none;
+}
+
+.cerrar {
+  align-self: flex-start;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: unset;
+    list-style-type: none;
+  }
+
+  #navegacion {
+    display: none;
+  }
+}
+
+.nav-link {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  font-size: 2rem;
+}
+
+.active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--light-text);
+}
+
+@media (min-width: 768px) {
+  header {
+    margin-bottom: 10rem;
+  }
+
+  .navegacion {
+    display: inline-block;
+    flex: 0 0 50%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* main */
+
+@media (min-width: 768px) {
+  .contenido-principal {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.descripcion {
+  flex: 0 0 35%;
+}
+
+.descripcion h2 {
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-size: 3.6rem;
+}
+
+.descripcion p {
+  font-family: var(--font-3);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.read-more {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.descripcion a {
+  display: inline-block;
+  color: var(--light-text);
+  font-family: var(--font-3);
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.descripcion span {
+  margin-left: 2rem;
+}
+
+@media (min-width: 768px) {
+  .descripcion h2 {
+    font-size: 4.8rem;
+    margin-top: 10 rem;
+  }
+
+  .descripcion p {
+    font-size: 2.4rem;
+  }
+
+  .read-more {
+    margin: 4rem 0;
+  }
+
+  .descripcion a {
+    font-size: 1.8rem;
+  }
+}
+
+.visualizacion {
+  flex: 0 0 60%;
+}
+
+.foto-principal {
+  max-width: 100%;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background-color: var(--dark-gray);
+  border-radius: 3px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  max-width: 50%;
+  padding: 1rem 5rem 1rem 2rem;
+  margin: -5rem 0 0 7rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  max-width: 4rem;
+  max-height: 4rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.name {
+  font-family: var(--font-3);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.prof {
+  font-family: var(--font-3);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--medium-gray);
+}
+
+.ref {
+  font-family: var(--font-2);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 1rem 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .card {
+    margin-top: -8rem;
+    margin-left: 15rem;
+  }
+
+  .avatar {
+    max-width: 5rem;
+    max-height: 5rem;
+    margin-right: 2rem;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .prof {
+    font-size: 1.2rem;
+  }
+
+  .ref {
+    font-size: 2.4rem;
+  }
+}
+
+/* Footer */
+
+footer p {
+  font-family: var(--font-3);
+  color: var(--light-gray);
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 6rem auto 2rem auto;
+}
